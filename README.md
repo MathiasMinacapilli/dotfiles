@@ -1,6 +1,6 @@
-# My VIM Config
+# Dot files
 
-This repo is intended to share my VIM config
+This repo is intended to share my dot files (and for me to reuse them between computers)
 
 # Getting started
 
