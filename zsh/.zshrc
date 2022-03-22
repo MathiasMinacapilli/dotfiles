@@ -122,3 +122,7 @@ function npmFreshInstall() {
     echo 'Installing packages...';
     npm i;
 }
+
+function useJava11() {
+    sdk use java 11.0.14-zulu;
+}
