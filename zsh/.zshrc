@@ -109,3 +109,16 @@ eval "$(pyenv init -)"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+function echoTest () {
+    echo 'test'
+}
+
+function npmFreshInstall() {
+    echo 'Deleting node_modules...';
+    sudo rm -rf node_modules/;
+    echo 'Deleting package-lock.json...';
+    rm package-lock.json;
+    echo 'Installing packages...';
+    npm i;
+}
