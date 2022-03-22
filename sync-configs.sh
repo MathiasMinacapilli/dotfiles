@@ -1,10 +1,13 @@
 
 echo 'Syncing .tmux.conf'
-cp ~/.tmux.conf .tmux.conf
+stow -D tmux
+stow tmux
 
 echo 'Syncing .vimrc'
-cp ~/.vimrc .vimrc
+stow -D vim 
+stow vim 
 
 echo 'Syncing .zshrc'
-cp ~/.zshrc .zshrc
+stow -D zsh
+stow zsh 
 
