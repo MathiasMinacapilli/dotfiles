@@ -9,8 +9,8 @@ set smartindent
 set autoindent
 set expandtab " to use spaces instead of tab for indentation
 set cursorline " to highlight the current line
-:set number relativenumber " turn hybrid line numbers on
-:set nu rnu
+" :set number relativenumber " turn hybrid line numbers on
+:set nu nornu
 set nowrap
 set smartcase
 set noswapfile
@@ -78,15 +78,19 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 
 " autocomplete
-"Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" editor
+Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'vim-airline/vim-airline'
+Plug 'mhinz/vim-signify'
+Plug 'yggdroot/indentline'
 
 call plug#end()
 
