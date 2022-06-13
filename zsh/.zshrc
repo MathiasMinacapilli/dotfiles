@@ -110,6 +110,10 @@ eval "$(pyenv init -)"
 export PATH="$HOME/.poetry/bin:$PATH"
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+if [ -f ~/.bash_profile ]; then
+    . ~/.bash_profile;
+fi
+
 # === Functions ===
 
 function echoTest () {
@@ -157,3 +161,4 @@ function man() {
     LESS_TERMCAP_us=$'\e[01;32m' \
     man "$@"
 }
+
