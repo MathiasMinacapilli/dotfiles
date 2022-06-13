@@ -1,4 +1,8 @@
 
+echo 'Syncing .bash_profile'
+stow -D bash_profile
+stow bash_profile 
+
 echo 'Syncing .tmux.conf'
 stow -D tmux
 stow tmux
