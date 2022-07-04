@@ -2,12 +2,19 @@
 syntax on
 
 set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+
+" tabstop:          Width of tab character
+" softtabstop:      Fine tunes the amount of white space to be added
+" shiftwidth        Determines the amount of whitespace to add in normal mode
+" expandtab:        When this option is enabled, vi will use spaces instead of tabs
+set tabstop     =4
+set softtabstop =4
+set shiftwidth  =4
+set expandtab
+
 set runtimepath+=~/.vim_runtime
 set smartindent
 set autoindent
-set expandtab " to use spaces instead of tab for indentation
 set cursorline " to highlight the current line
 " :set number relativenumber " turn hybrid line numbers on
 :set nu nornu
