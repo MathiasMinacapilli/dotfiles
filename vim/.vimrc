@@ -1,4 +1,3 @@
-
 syntax on
 
 set noerrorbells
@@ -29,7 +28,7 @@ set incsearch
 set colorcolumn=100
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-colorscheme peachpuff
+colorscheme slate
 set background=dark
 
 " source ~/.vim_runtime/vimrcs/basic.vim
