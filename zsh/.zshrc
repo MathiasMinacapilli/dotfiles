@@ -8,7 +8,7 @@ export ZSH="/Users/mminacapilli/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="cypher"
+ZSH_THEME="simple"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,10 +105,13 @@ source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 # nordic-doctor
 export NORDIC_DOCTOR_DIR="$HOME/.nordic-doctor"
 export PATH="$NORDIC_DOCTOR_DIR/bin:$PATH"
+
 eval "$(pyenv init -)"
 
-export PATH="$HOME/.poetry/bin:$PATH"
 source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
 
 if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile;
@@ -162,3 +165,10 @@ function man() {
     man "$@"
 }
 
+function make_release() {
+    echo "Enter release name"
+    read release_name 
+    release_branch_name="release/$release_name"
+    git checkout -b $release_branch_name
+    git push --set-upstream origin $release_branch_name
+}
