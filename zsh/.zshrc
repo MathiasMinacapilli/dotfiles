@@ -172,3 +172,11 @@ function make_release() {
     git checkout -b $release_branch_name
     git push --set-upstream origin $release_branch_name
 }
+
+export GOPRIVATE=github.com/mercadolibre/*,github.com/melisource/*
+export GONOSUMDB=github.com/mercadolibre/*,github.com/melisource/*
+export GOPROXY=https://go.artifacts.furycloud.io/
+export GONOPROXY=https://go.artifacts.furycloud.io/
+
+# Golang
+export PATH=$(go env GOPATH)/bin:$PATH
