@@ -10,7 +10,7 @@ home directory (creating sym links).
 1. Clone this repo under home (should be `$HOME/dotfiles`)
 1. Inside this repo run script `sh sync-configs.sh`
 1. Run inside of VIM to install plugins: `:PlugInstall`
-1. Install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh)
+1. Install nodejs, zsh, [oh my zsh](https://github.com/ohmyzsh/ohmyzsh)
 
 # Extra tools
 
