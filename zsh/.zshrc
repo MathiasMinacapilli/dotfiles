@@ -180,3 +180,6 @@ export GONOPROXY=https://go.artifacts.furycloud.io/
 
 # Golang
 export PATH=$(go env GOPATH)/bin:$PATH
+
+# Ros robotics framework
+source /opt/ros/jazzy/setup.zsh
