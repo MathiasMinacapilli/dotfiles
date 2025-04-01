@@ -28,7 +28,7 @@ set incsearch
 set colorcolumn=100
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-colorscheme monokai
+colorscheme desert
 set background=dark
 
 " source ~/.vim_runtime/vimrcs/basic.vim
