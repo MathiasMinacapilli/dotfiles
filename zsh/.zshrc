@@ -100,6 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 
 # nordic-doctor
@@ -183,3 +187,36 @@ export PATH=$(go env GOPATH)/bin:$PATH
 
 # Ros robotics framework
 source /opt/ros/jazzy/setup.zsh
+export ROS_DOMAIN_ID=42
+
+function convert_heic_images() {
+	# Inicializa una variable de éxito
+	todo_ok=true
+
+	for img in *.HEIC; do
+	  # Salta si no hay archivos que coincidan
+	  [ -e "$img" ] || continue
+
+	  # Construye el nombre del archivo .jpg
+	  output="${img%.*}.jpg"
+
+	  # Intenta convertir la imagen
+	  if heif-convert "$img" "$output"; then
+		echo "✔️ $img convertido correctamente."
+	  else
+		echo "❌ Error al convertir $img."
+		todo_ok=false
+	  fi
+	done
+
+	# Si todas las conversiones fueron exitosas, elimina los archivos .heic/.HEIC
+	if $todo_ok; then
+	  echo "✅ Todas las conversiones fueron exitosas. Borrando archivos .heic..."
+	  rm *.HEIC
+	else
+	  echo "⚠️ Algunas conversiones fallaron. No se borrarán los archivos .heic."
+	fi
+
+}
+
+
