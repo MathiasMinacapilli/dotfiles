@@ -220,3 +220,6 @@ function convert_heic_images() {
 }
 
 
+
+# opencode
+export PATH=/home/mathias/.opencode/bin:$PATH
