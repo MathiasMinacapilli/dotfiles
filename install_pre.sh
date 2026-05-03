@@ -6,7 +6,7 @@ echo "🔄 Actualizando sistema..."
 sudo apt update && sudo apt upgrade -y
 
 echo "📦 Instalando paquetes base..."
-sudo apt install -y curl wget git build-essential software-properties-common ca-certificates gnupg lsb-release stow
+sudo apt install -y curl wget git build-essential software-properties-common ca-certificates gnupg lsb-release stow python3 python3-venv python3-pip
 
 # -----------------------------
 # ZSH
@@ -74,6 +74,16 @@ else
 fi
 
 # -----------------------------
+# Poetry
+# -----------------------------
+if ! command -v poetry >/dev/null 2>&1 && [ ! -f "$HOME/.local/bin/poetry" ]; then
+  echo "🐍 Instalando Poetry..."
+  curl -sSL https://install.python-poetry.org | python3 -
+else
+  echo "✅ Poetry ya está instalado"
+fi
+
+# -----------------------------
 # Verificaciones
 # -----------------------------
 echo ""
@@ -83,6 +93,7 @@ echo "node: $(node -v || echo 'no instalado')"
 echo "npm: $(npm -v || echo 'no instalado')"
 echo "docker: $(docker --version || echo 'no instalado')"
 echo "stow: $(stow --version || echo 'no instalado')"
+echo "poetry: $(poetry --version 2>/dev/null || $HOME/.local/bin/poetry --version 2>/dev/null || echo 'no instalado')"
 
 echo ""
 echo "⚠️ IMPORTANTE:"
