@@ -10,6 +10,13 @@ This repo is intended to share my dot files (and for me to reuse them between co
 - Install docker (https://docs.docker.com/engine/install/debian/#install-using-the-repository)
     - https://gist.github.com/mykubicle/9067cdacff99c00e47933d40e595db90
 - `gh` cli
+
+## Status bar
+
+`sudo apt install gnome-shell-extension-manager lm-sensors`
+
+Open "extension manager" and browse for "Vitals - corecoding"
+ 
  
 # Getting started
 
