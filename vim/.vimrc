@@ -2,6 +2,8 @@ syntax on
 
 set noerrorbells
 
+set mouse=a
+
 " tabstop:          Width of tab character
 " softtabstop:      Fine tunes the amount of white space to be added
 " shiftwidth        Determines the amount of whitespace to add in normal mode
@@ -17,7 +19,7 @@ set autoindent
 set cursorline " to highlight the current line
 " :set number relativenumber " turn hybrid line numbers on
 :set nu nornu
-set nowrap
+set wrap
 set smartcase
 set noswapfile
 set nobackup
